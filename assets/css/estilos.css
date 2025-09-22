@@ -1,0 +1,197 @@
+/* Import tipografía externa desde Google Fonts (Roboto para legibilidad en noticias) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales: Aplicar tipografía a todos los elementos y fondo gris */
+body {
+    font-family: 'Roboto', sans-serif; /* Tipografía externa aplicada */
+    background-color: #f5f5f5; /* Fondo gris requerido */
+    margin: 100;
+    padding: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+/* Header: Centrado con logotipo y datetime */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menú superior horizontal */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #13213e;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 30px;
+    z-index: 2000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 0; /* Quita el margen inferior */
+}
+
+.sidebar-menu img {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.sidebar-menu h1 {
+    font-size: 1.6em;
+    margin-bottom: 0;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.sidebar-menu #datetime {
+    font-size: 1em;
+    color: #c9d2d0;
+    margin-top: 0;
+    text-align: left;
+}
+
+#datetime {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Nav: Menú horizontal sin subrayado base, hover negrita sin subrayado */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: underline; /* Subrayado cuando mouse no está encima */
+    color: black;
+}
+
+nav ul li a:hover {
+    font-weight: bold; /* Negrita en hover */
+    text-decoration: none; /* Quitar subrayado en hover */
+}
+
+/* Sección principal: Grilla de artículos con CSS Grid avanzado (repeat auto-fit para responsivo) */
+section {
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid; /* Técnica avanzada: CSS Grid para layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grilla responsiva: multi-columna, ajusta a 1 en mobile */
+    gap: 20px; /* Espacio entre bloques */
+}
+
+/* Bloques de artículos: Fondo blanco, hover efecto */
+.article-block {
+    margin-top:40px;
+    background-color: white; /* Fondo blanco para artículos */
+    padding: 15px;
+    border: 1.5px solid #000000;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+}
+
+.article-block:hover {
+    background-color: black; /* Fondo negro en hover */
+    color: white; /* Letra blanca en hover */
+}
+
+/* Multimedia: Ajuste responsivo */
+video, audio {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 50px auto;
+}
+
+/* Formularios: Estilos para nuevo form de artículos y contacto (fondo blanco, consistente con artículos) */
+form {
+    max-width: 750px;
+    margin: 10px 0 20px 50px;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.form-centrado {
+    max-width: 600px;
+    margin: 10px 0 20px 60px;
+    width: 40%;
+}
+
+h2 {
+    margin: 10px 0 20px 50px;
+}
+
+p {
+    margin: 10px 0 20px 50px;
+}
+
+input[type="text"], textarea {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background-color: #13213e;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* Contador: Estilo simple */
+#article-count {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer: Estilo distinto, con form contacto */
+footer {
+    padding: 30px 0; background: #c9d2d0; color: #13213e;
+    background-color: #c9d2d0; /* Fondo requerido */
+    color: #13213e; /* Color de letra requerido */
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#hora {
+    position: fixed !important;
+    top: 15px;
+    right: 30px;
+    background: #fff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 3000; /* Más alto que la barra */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #13213e;
+    margin: 0; /* Elimina el margin-left grande */
+}
+
+/* Media query para responsivo: Single column en pantallas pequeñas (celular) */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna en mobile */
+    }
+}

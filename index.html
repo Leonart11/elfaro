@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro - Inicio</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <!-- Bootstrap CDN para UI moderna -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top:56px;">
+    <div class="container-fluid">
+        <span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <span id="hora" class="nav-link"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="alert alert-warning text-center mb-0 rounded-0" role="alert" style="margin-top: -40px;">
+        ¡Aviso importante! Bienvenido a El Faro. Últimas noticias y novedades aquí.
+    </div>
+    <header>
+        <div class="sidebar-menu">
+            <img src="assets/imagenes/lighthouse.png" alt="Logotipo El Faro" style="height:60px;" />
+            <h1>El Faro</h1>
+            <p id="datetime"></p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="deporte.html">Deporte</a></li>
+            <li><a href="negocios.html">Negocios</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Noticias Generales</h2>
+        <p id="article-count">Artículos totales: 3</p>
+        <!-- Form para agregar artículo -->
+        <form>
+            <input type="text" id="article-title" placeholder="Título del artículo">
+            <textarea id="article-text" placeholder="Texto del artículo"></textarea>
+            <button type="button" id="add-article-btn">Agregar Artículo</button>
+        </form>
+        <!-- Artículo más reciente destacado -->
+        <div class="grid-container">
+            <div class="article-block" style="border-width:1.5px;">
+                <img src="assets/imagenes/camara.jpg" alt="Imagen artículo" style="width:100%;max-height:120px;object-fit:cover;margin-bottom:8px;">
+                <h3>Adolescentes ganan Earth Prize 2025 por innovación en agua potable</h3>
+                <p>Categoría: Medio Ambiente</p>
+                <p>Dos jóvenes europeos reciben el premio por su tecnología que promete agua segura para todos, destacando avances en sostenibilidad y reducción de plásticos en ecosistemas (actualizado 21 sept. 2025).</p>
+            </div>
+            <!-- Otros artículos más pequeños -->
+            <div class="article-block">
+                <img src="assets/imagenes/aislado.jpg" alt="Imagen artículo" style="width:100%;max-height:120px;object-fit:cover;margin-bottom:8px;">
+                <h3>Venta de viajes Imserso arranca el 6 de octubre para 2,8 millones de pensionistas</h3>
+                <p>Categoría: Viajes</p>
+                <p>Paquetes vacacionales en costas y Europa inician comercialización en nueve comunidades, con precios accesibles para escapadas post-verano (actualizado 21 sept. 2025).</p>
+            </div>
+            <div class="article-block">
+                <img src="assets/imagenes/maravilla.jpg" alt="Imagen artículo" style="width:100%;max-height:120px;object-fit:cover;margin-bottom:8px;">
+                <h3>Escapadas ideales en septiembre: Roma y Praga con menos turistas</h3>
+                <p>Categoría: Viajes</p>
+                <p>Clima agradable y vuelos baratos hacen de estas ciudades europeas opciones perfectas para disfrutar monumentos sin el bullicio estival (actualizado 21 sept. 2025).</p>
+            </div>
+        </div>
+        <div class="grid-container"></div> <!-- Artículos cargados dinámicamente -->
+        <video controls>
+            <source src="assets/videos/shap.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+        <audio controls>
+            <source src="assets/audios/sonido.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
+    </section>
+    <h2>Contactenos</h2>
+    <form id="contact-form" class="form-centrado">
+        <input type="text" id="contact-name" placeholder="Nombre">
+        <textarea id="contact-message" placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <h5>Sobre El Faro</h5>
+                        <p>Noticias confiables y actualizadas para toda la comunidad.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <h5>Contacto</h5>
+                        <p>Email: contacto@elfaro.com<br>Redes sociales: @elfaro</p>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    &copy; 2025 El Faro. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+        <script src="js/articulos.js"></script>
+        <script src="js/hora.js"></script>
+    </footer>
+</body>
+</html>
